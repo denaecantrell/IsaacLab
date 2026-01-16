@@ -12,11 +12,18 @@
 # Exits if error occurs
 set -e
 
-# Set tab-spaces
-tabs 4
+# Set tab-spaces (not necessary)
+#tabs 4
 
 # get source directory
 export ISAACLAB_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# set loggin directories
+export TMPDIR="$HOME/.tmp"
+export ISAACLAB_LOGS_DIR="$HOME/.isaaclab/logs"
+
+mkdir -p "$TMPDIR"
+mkdir -p "$ISAACLAB_LOGS_DIR"
 
 #==
 # Helper functions
